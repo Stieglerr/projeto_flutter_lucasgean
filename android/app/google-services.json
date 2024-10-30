@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "695069693791",
+    "project_id": "flutternelsonmandelasosabin",
+    "storage_bucket": "flutternelsonmandelasosabin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695069693791:android:209161524d444fd69808ea",
+        "android_client_info": {
+          "package_name": "com.example.new_login_screen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7Tkv1lZi-BmKZBKN9vgoupoAMhFK3gnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695069693791:android:333e800f665403a89808ea",
+        "android_client_info": {
+          "package_name": "projeto.durskifelas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7Tkv1lZi-BmKZBKN9vgoupoAMhFK3gnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:new_login_screen/services/authentication_service.dart';
 import 'package:new_login_screen/widgets/text_field_widget.dart';
+import 'package:new_login_screen/widgets/snack_bar_widget.dart';
+
 
 class LoginRegister extends StatefulWidget {
   const LoginRegister({super.key});
@@ -13,6 +16,7 @@ class _LoginRegisterState extends State<LoginRegister> {
   TextEditingController _nameController = TextEditingController();
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+  AuthenticationService _authService = AuthenticationService();
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +57,27 @@ class _LoginRegisterState extends State<LoginRegister> {
                             ElevatedButton(
                                 onPressed: () {
                                   if (_formKey.currentState?.validate() ??
-                                      false) {}
+                                      false) {
+                                        String name = _nameController.text;
+                                        String email = _emailController.text;
+                                        String password = _passwordController.text;
+                                        _authService.registerUser(
+                                          name: name, email: email, password: password).then((value){
+                                            if (value!=null){
+                                              snackBarWidget(
+                                                context: context,
+                                                title: value,
+                                                isError: true);
+                                            }
+                                              else {
+                                                snackBarWidget(
+                                                  context: context,
+                                                  title:'Cadastro com sucesso!',
+                                                  isError: false);
+                                                  Navigator.pop(context);                                                         
+                                            }
+                                          });
+                                      }
                                 },
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
